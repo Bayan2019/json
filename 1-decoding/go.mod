@@ -1,3 +1,3 @@
-module github.com/Bayan2019/go-http-client/02-json/2-decoding
+module github.com/Bayan2019/json/1-decoding
 
 go 1.23.2

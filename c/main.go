@@ -4,35 +4,35 @@ import (
 	"fmt"
 )
 
-const cyclistUrl = "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json"
-const educationUrl = "https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/for_user_education.json"
-const booksUrl = "https://raw.githubusercontent.com/benoitvallon/100-best-books/refs/heads/master/books.json"
+const jokesUrl = "https://api.sampleapis.com/jokes/goodJokes"
+const bitcoinUrl = "https://api.sampleapis.com/bitcoin/historical_prices"
+const healthUrl = "https://api.sampleapis.com/health/professions"
 
 func main() {
-	// cyclists, err := getResources(cyclistUrl)
-	// if err != nil {
-	// 	fmt.Println("Error getting locations:", err)
-	// 	return
-	// }
-	// fmt.Println("Resources:")
-	// logResources(cyclists)
-	// fmt.Println("---")
-
-	// educations, err := getResources(educationUrl)
-	// if err != nil {
-	// 	fmt.Println("Error getting items:", err)
-	// 	return
-	// }
-	// fmt.Println("Educations:")
-	// logResources(educations)
-	// fmt.Println("---")
-
-	books, err := getResources(booksUrl)
+	jokes, err := getResources(jokesUrl)
 	if err != nil {
-		fmt.Println("Error getting items:", err)
+		fmt.Println("Error getting jokes:", err)
 		return
 	}
-	fmt.Println("Book:")
-	logResources(books)
+	fmt.Println("Jokes:")
+	logResources(jokes)
+	fmt.Println("---")
+
+	bitcoinPrices, err := getResources(bitcoinUrl)
+	if err != nil {
+		fmt.Println("Error getting bitcoinPrices:", err)
+		return
+	}
+	fmt.Println("BitCoin:")
+	logResources(bitcoinPrices)
+	fmt.Println("---")
+
+	healths, err := getResources(healthUrl)
+	if err != nil {
+		fmt.Println("Error getting Health Professionals:", err)
+		return
+	}
+	fmt.Println("Health Professionals:")
+	logResources(healths)
 
 }

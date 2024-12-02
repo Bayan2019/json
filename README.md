@@ -9,3 +9,4 @@ If we want to send an object outside our program, for example, across the intern
 # Resourses
 
 - [JSON to Go](https://mholt.github.io/json-to-go/)
+- [Samples Apis](https://api.sampleapis.com/)
